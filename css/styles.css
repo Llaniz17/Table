@@ -3,7 +3,14 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+body{
+    display: grid;
+}
+.header{
+    font-size: 30px;
+    background-color: antiquewhite;
+    text-align: center;
+}
 main{
     display: grid;
     padding: 20px 10px;
@@ -75,6 +82,25 @@ main{
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+    body{
+        grid-template-rows: 1fr 10fr;
+    }
+    .header{
+        font-size: 10px;
+        margin: 1px;
+    }
+    main{
+        grid-template-columns: 1fr;
+    }
+}
+@media only screen and (min-width:600px) and (max-width: 992px ) {
+    body{
+        grid-template-rows: 1fr 10fr;
+    }
+    .header{
+        font-size: 20px;
+        margin: 1px;
+    }
     main{
         grid-template-columns: 1fr;
     }
@@ -82,6 +108,10 @@ main{
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+    body{
+        grid-template-rows: 1fr 10fr;
+    }
+
     main{
         grid-template-columns: 1fr 1.5fr;
     }
